@@ -3,6 +3,12 @@
 	<meta charset="UTF-8">
 	<title>Belajar CI</title>
 	<link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/bootstrap.min.css">
+
+	<!-- datatables -->
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-default" role="navigation">
@@ -23,7 +29,8 @@
 						<div class="panel-body">
 							<a href="<?php echo site_url('/status/DataAmil/')?>">Data Amil</a><br>
 							<a href="<?php echo site_url('/status/DataMustahiq/')?>">Data Mustahiq</a><br>
-							<a href="<?php echo site_url('/status/DataMuzaqi/')?>">Data Muzaqi</a>
+							<a href="<?php echo site_url('/status/DataMuzaqi/')?>">Data Muzaqi</a><br>
+							<a href="<?php echo site_url('/admin/Bank')?>">Data Bank</a>
 						</div>
 					</div>
 					<li><a data-toggle="collapse" href="#zakat">Zakat</a></li>
@@ -40,5 +47,6 @@
 						</div>
 					</div>
 				</ul>
+				<a href="<?php echo base_url('index.php/Login/logout') ?>" class="nav-tabs-dropdown btn btn-block btn-primary">Logout</a>
 			</div>	
 
