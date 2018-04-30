@@ -28,7 +28,27 @@ class Bank extends CI_Controller {
 			$this->Bank_m->insertData($object);
 			redirect('admin/bank','refresh');
 		}
-		
+	}
+	public function update($id)
+	{
+		$this->load->model('Bank_m');
+		$this->load->helper('form');
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('nama', 'Nama', 'required');
+		$this->form_validation->set_rules('norek', 'No Rekening', 'required');
+		$this->form_validation->set_rules('saldo', 'Saldo', 'required');
+		$data['getData'] = $this->Bank_m->getDataWhereId($id)[0];
+		if($this->form_validation->run() == false){
+			$this->load->view('admin/bank/update',$data);
+		}else{
+			$object = array(
+				'nama' => $this->input->post('nama'),
+				'norek' => $this->input->post('norek'),
+				'saldo' => $this->input->post('saldo')
+			);
+			$this->Bank_m->updateData($object,$id);
+			redirect('admin/bank','refresh');
+		}
 	}
 	public function hapus($id)
 	{

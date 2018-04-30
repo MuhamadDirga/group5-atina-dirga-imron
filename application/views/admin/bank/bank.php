@@ -17,7 +17,7 @@
 					<td><?php echo $value['norek'] ?></td>
 					<td><?php echo $value['saldo'] ?></td>
 					<td>
-						<a href="<?php echo base_url() ?>" class="btn btn-sm btn-success">Ubah</a>
+						<a href="<?php echo base_url('index.php/admin/bank/update/'.$value['id']) ?>" class="btn btn-sm btn-success">Ubah</a>
 						<a href="<?php echo base_url('index.php/admin/bank/hapus/'.$value['id']) ?>" class="btn btn-sm btn-danger">Hapus</a>
 					</td>
 				</tr>
