@@ -36,7 +36,7 @@
 					<li><a data-toggle="collapse" href="#zakat">Zakat</a></li>
 					<div id="zakat" class="panel-collapse collapse">
 						<div class="panel-body">
-							<a href="<?php echo site_url('/zakat/PembagianZakat/')?>">Pembagian Zakat</a>
+							<a href="<?php echo site_url('/zakat/donasi/')?>">Donasi</a>
 						</div>
 					</div>
 					<li><a data-toggle="collapse" href="#dataview">Data View</a></li>
