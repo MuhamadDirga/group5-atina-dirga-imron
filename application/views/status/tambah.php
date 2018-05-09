@@ -12,37 +12,37 @@
 		<div class="form-group">
 			<label for="norek" class="col-sm-2 control-label">Alamat</label>
 			<div class="col-sm-10">
-				<input type="text" name="alamat" class="form-control" id="norek" placeholder="No Rekening">
+				<input type="text" name="alamat" class="form-control" id="norek" placeholder="Alamat">
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="saldo" class="col-sm-2 control-label">Kota</label>
 			<div class="col-sm-10">
-				<input type="text" name="kota" class="form-control" id="saldo" placeholder="Saldo">
+				<input type="text" name="kota" class="form-control" id="saldo" placeholder="Kota">
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="saldo" class="col-sm-2 control-label">No Hp</label>
 			<div class="col-sm-10">
-				<input type="text" name="nohp" class="form-control" id="saldo" placeholder="Saldo">
+				<input type="text" name="nohp" class="form-control" id="saldo" placeholder="No HP">
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="saldo" class="col-sm-2 control-label">Email</label>
 			<div class="col-sm-10">
-				<input type="text" name="email" class="form-control" id="saldo" placeholder="Saldo">
+				<input type="text" name="email" class="form-control" id="saldo" placeholder="Email">
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="saldo" class="col-sm-2 control-label">Username</label>
 			<div class="col-sm-10">
-				<input type="text" name="username" class="form-control" id="saldo" placeholder="Saldo">
+				<input type="text" name="username" class="form-control" id="saldo" placeholder="Username">
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="saldo" class="col-sm-2 control-label">Password</label>
 			<div class="col-sm-10">
-				<input type="text" name="password" class="form-control" id="saldo" placeholder="Saldo">
+				<input type="text" name="password" class="form-control" id="saldo" placeholder="Password">
 			</div>
 		</div>
 		<div class="form-group">
