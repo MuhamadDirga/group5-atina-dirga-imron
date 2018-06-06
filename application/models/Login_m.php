@@ -13,7 +13,7 @@ class Login_m extends CI_Model {
 		));
 		$query = $this->db->get();
 		if($query->num_rows() == 1){
-			return true;
+			return $query->result_array()[0];
 		}else{
 			return false;
 		}

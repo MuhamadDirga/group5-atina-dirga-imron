@@ -10,7 +10,7 @@
 			<th>Aksi</th>
 		</thead>
 		<tbody>
-			<?php foreach ($getData as $key => $value): ?>
+			<?php foreach ($getData as $key => $value): ?> 
 				<tr>
 					<td><?php echo $key+1 ?></td>
 					<td><?php echo $value['nama'] ?></td>

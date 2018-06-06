@@ -11,12 +11,14 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-default" role="navigation">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Zakat</a>
+				<a class="navbar-brand" href="#">Amil Zakat</a>
 			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="<?php echo site_url('Home')?>"><span class="glyphicon glyphicon-user"></span> Log out</a></li>
+			</ul>
 		</div>
 	</nav>
 	<div class="container">
@@ -27,26 +29,18 @@
 					<li><a data-toggle="collapse" href="#status">Status</a></li>
 					<div id="status" class="panel-collapse collapse">
 						<div class="panel-body">
-							<a href="<?php echo site_url('/status/DataAmil/')?>">Data Amil</a><br>
-							<a href="<?php echo site_url('/status/DataMustahiq/')?>">Data Mustahiq</a><br>
 							<a href="<?php echo site_url('/status/DataMuzaqi/')?>">Data Muzaqi</a><br>
-							<a href="<?php echo site_url('/admin/Bank')?>">Data Bank</a>
 						</div>
 					</div>
-					<li><a data-toggle="collapse" href="#zakat">Zakat</a></li>
+					<li><a data-toggle="collapse" href="#zakat">Aktivitas</a></li>
 					<div id="zakat" class="panel-collapse collapse">
 						<div class="panel-body">
-							<a href="<?php echo site_url('/zakat/PembagianZakat/')?>">Pembagian Zakat</a>
+							<a href="<?php echo site_url('/aktifitas/Kegiatan/')?>">Kegiatan</a><br>
+							<a href="<?php echo site_url('/aktifitas/Kategori/')?>">Kategori</a><br>
+							<a href="<?php echo site_url('/aktifitas/Donasi/')?>">Donasi</a>
 						</div>
 					</div>
-					<li><a data-toggle="collapse" href="#dataview">Data View</a></li>
-					<div id="dataview" class="panel-collapse collapse">
-						<div class="panel-body">
-							<a href="<?php echo site_url('/dataview/Status/')?>">Status</a><br>
-							<a href="<?php echo site_url('/dataview/Zakat/')?>">Zakat</a>
-						</div>
-					</div>
+					<li><a href="<?php echo site_url('/admin/Bank')?>">Bank</a></li>
 				</ul>
-				<a href="<?php echo base_url('index.php/Login/logout') ?>" class="nav-tabs-dropdown btn btn-block btn-primary">Logout</a>
 			</div>	
 
