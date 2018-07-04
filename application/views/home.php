@@ -48,7 +48,7 @@
 				<br>
 				<small>Sisihkan sebagian hartamu</small>
 				<br>
-				<h4>Total dana yang terkumpul sebanyak Rp.<?php echo $saldo_saat_ini?></h4>
+				<h4>Total yang terkumpul sebanyak Rp.<?php echo $saldo_saat_ini?></h4>
 			</h1>
 		</div>
 	</section>
