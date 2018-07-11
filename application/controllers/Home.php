@@ -9,6 +9,7 @@ class Home extends CI_Controller {
 		$this->load->model('Donasi_m');
 		$this->load->model('Home_m');
 		$this->load->model('Kegiatan_m');
+		$this->load->model('Saldo_m');
 		$this->load->library('form_validation');
 	}
 
@@ -43,6 +44,12 @@ class Home extends CI_Controller {
 
 			$data['saldo'] = $this->Donasi_m->getSaldo();
 			$data['getData'] = $this->Kegiatan_m->getDataLimit(4);
+			$saldo_terakhir = $this->Saldo_m->getSaldo();
+			$saldo = 0;
+			foreach ($saldo_terakhir->result() as $value) {
+				$saldo = $value->saldo;
+			}
+			$data['saldo'] = $saldo;
 			$this->load->view('Home',$data);
 		}
 	}

@@ -1,6 +1,7 @@
 <?php $this->load->view('header');?>
 <div class="col-sm-9">
 	<a href="<?php echo base_url() ?>index.php/admin/bank/tambah" class="btn btn-primary" style="margin-bottom: 2rem;">Tambah Data</a>
+	<h4>Saldo Rp.<?php echo $saldo?></h4>
 	<table id="example" class="table table-striped table-bordered" style="width:100%">
 		<thead>
 			<th>#</th>

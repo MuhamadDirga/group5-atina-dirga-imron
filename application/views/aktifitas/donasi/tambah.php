@@ -41,17 +41,6 @@
 		</div>
 	</div>
 
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="nama">Bank :</label>
-		<div class="col-sm-10">
-			<select name="bank" class="form-control" id="sel1">
-				<?php foreach ($getDataBank as $key): ?>
-				<option value="<?php echo $key->id?>"><?php echo $key->nama?></option>
-				<?php endforeach ?>
-			</select>
-		</div>
-	</div>
-
 	<button type="submit" class="btn btn-primary">Submit</button>
 	<?php echo form_close(); ?>
 </div>

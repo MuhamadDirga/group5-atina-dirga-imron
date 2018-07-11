@@ -8,13 +8,19 @@ class Donasi extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Donasi_m');
 		$this->load->helper('form','url');
+		$this->load->model('Saldo_m');
 		$this->load->library('form_validation');
 	}
 
 	public function index()
 	{
+		$saldo_terakhir = $this->Saldo_m->getSaldo();
+		$saldo = 0;
+		foreach ($saldo_terakhir->result() as $value) {
+			$saldo = $value->saldo;
+		}
+		$data['saldo'] = $saldo;
 		$data['getData'] = $this->Donasi_m->getData();
-
 		//passing data ke view edit
 		$this->load->view('aktifitas/donasi/donasi',$data);	
 	}
@@ -34,11 +40,22 @@ class Donasi extends CI_Controller {
 				'tanggal' => $this->input->post('tanggal'),
 				'jumlah' => $this->input->post('jumlah'),
 				'id_muzaki' => $this->input->post('muzaki'),
-				'id_kategori' => $this->input->post('kategori'),
-				'id_bank' => $this->input->post('bank')
+				'id_kategori' => $this->input->post('kategori')
+				// 'id_bank' => $this->input->post('bank')
 			);
+
+			$saldo_terakhir = $this->Saldo_m->getSaldo();
+			$saldo = 0;
+			foreach ($saldo_terakhir->result() as $value) {
+				$saldo = $value->saldo;
+			}
+			$saldo-=$this->input->post('jumlah');
+			$object2 = array('saldo' =>$saldo);
+			
+			$this->Saldo_m->updateSaldo($object2);
+
 			$this->Donasi_m->insertData($object);
-			$this->Donasi_m->addSaldo($this->input->post('bank'),$this->input->post('jumlah'));
+			//$this->Donasi_m->addSaldo($this->input->post('bank'),$this->input->post('jumlah'));
 			redirect('aktifitas/Donasi','refresh');
 		} 
 	}

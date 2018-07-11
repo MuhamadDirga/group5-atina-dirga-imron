@@ -64,7 +64,7 @@ class Donasi_m extends CI_Model {
 	public function getSaldo()
 	{
 		$this->db->select_sum('saldo');
-		return $this->db->get('bank')->result_array();
+		return $this->db->get('bank');
 	}
 
 	public function getData()
@@ -75,11 +75,11 @@ class Donasi_m extends CI_Model {
 		// $this->db->join('bank', 'bank.id = donasi.id_kategori');
 		// $this->db->from('donasi');
 		$query = $this->db->query("
-			SELECT d.id_donatur as id,d.tanggal as tanggal,d.jumlah as jumlah,m.nama as nama,k.nama as nama2,b.nama as nama3
+			SELECT d.id_donatur as id,d.tanggal as tanggal,d.jumlah as jumlah,m.nama as muzaki,k.nama as kategori
 			from donasi d
 			inner join muzaki m on d.id_muzaki = m.id 
 			inner join kategori k on d.id_kategori = k.id
-			inner join bank b on d.id_bank = b.id
+			-- inner join bank b on d.id_bank = b.id
 		");
 		return $query->result_array();
 	}
