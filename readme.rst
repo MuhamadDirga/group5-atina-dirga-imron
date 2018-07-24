@@ -8,3 +8,6 @@ Zakat untuk umat dibangun untuk kemaslahatan umat muslim, aplikasi ini mendata a
 Release Information
 *******************
 0.0.1
+
+###################
+Penambahan Button Donasi
