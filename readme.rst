@@ -65,3 +65,6 @@ data berupa nama penerima, dan jumlah donasi yang diterima oleh penerima. Lalu d
 
 .. The CodeIgniter team would like to thank EllisLab, all the
 .. contributors to the CodeIgniter project and you, the CodeIgniter user.
+
+####################
+Insyaallah Fix
